@@ -1,0 +1,25 @@
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+		#estilo{
+		width: 80%;
+                background-color: black;
+                max-width: 700px;
+                margin: 5px auto;
+		
+		}
+    a:link{
+    text-decoration: none;
+    color: black;
+}
+		
+	.prueba{
+		width: 90%;
+		margin: auto;
+	}
+	body {background-color: activecaption;}
+        
+ 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="DetallefacturasViewDlg" widgetVar="DetallefacturasViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewDetallefacturasTitle}">
+            <h:form id="DetallefacturasViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{detallefacturasController.selected != null}">
+                        <h:outputText value="#{bundle.ViewDetallefacturasLabel_iddetalleFactura}"/>
+                        <h:outputText value="#{detallefacturasController.selected.iddetalleFactura}" title="#{bundle.ViewDetallefacturasTitle_iddetalleFactura}"/>
+                        <h:outputText value="#{bundle.ViewDetallefacturasLabel_precio}"/>
+                        <h:outputText value="#{detallefacturasController.selected.precio}" title="#{bundle.ViewDetallefacturasTitle_precio}"/>
+                        <h:outputText value="#{bundle.ViewDetallefacturasLabel_cantidad}"/>
+                        <h:outputText value="#{detallefacturasController.selected.cantidad}" title="#{bundle.ViewDetallefacturasTitle_cantidad}"/>
+                        <h:outputText value="#{bundle.ViewDetallefacturasLabel_totalVenta}"/>
+                        <h:outputText value="#{detallefacturasController.selected.totalVenta}" title="#{bundle.ViewDetallefacturasTitle_totalVenta}"/>
+                        <h:outputText value="#{bundle.ViewDetallefacturasLabel_idfactura}"/>
+                        <h:outputText value="#{detallefacturasController.selected.idfactura}" title="#{bundle.ViewDetallefacturasTitle_idfactura}"/>
+                        <h:outputText value="#{bundle.ViewDetallefacturasLabel_idcocinero}"/>
+                        <h:outputText value="#{detallefacturasController.selected.idcocinero}" title="#{bundle.ViewDetallefacturasTitle_idcocinero}"/>
+                        <h:outputText value="#{bundle.ViewDetallefacturasLabel_idplato}"/>
+                        <h:outputText value="#{detallefacturasController.selected.idplato}" title="#{bundle.ViewDetallefacturasTitle_idplato}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="DetallefacturasViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
